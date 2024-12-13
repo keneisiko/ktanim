@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <style>
+            @keyframes poiv1{
+                from{
+                    bottom: -100px;
+                }
+                50%{
+                    bottom: 200px;
+                }
+                to{
+                    bottom: 150px;
+                }
+            }
+            @keyframes poiv{
+                from{
+                    bottom: -100px;
+                }
+                50%{
+                    bottom: 250px;
+                }
+                to{
+                    bottom: 220px;
+                }
+            }
+            @keyframes move{
+                from{
+                    left: -10%;
+                }
+                50%{
+                    left: 85.0%;
+                    
+                }
+                to{
+                    
+                }
+            }
+            @keyframes sun{
+                from{
+                    transform: rotate(0);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+            .sky{
+                background-color: lightblue;
+                height: 700px;
+            }
+            .sun{
+                animation: sun 4s infinite linear;
+                width: 200px;
+            }
+            .ground{
+                background-color: rgb(20, 138, 20);
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sky">
+            <div class="sun"><img src="img/Sun.png" style="height: 200px; width: 200px;"></div>
+        </div>
+        <div class="ground">
+            <div><img src="img/car.png" style="height: 200px; width: 200px; position: absolute;left: -10%; animation: move 5s infinite linear;z-index: 2; animation-delay: 5s;"></div>
+            <div><img src="img/tree.png" style="height: 300px; width: 300px; position: absolute; bottom:220px; left:70%; animation: poiv 3s ease-in;"></div>
+            <div><img src="img/house.png" style="height: 400px; width: 400px; position: absolute; left: 40%; bottom: 150px;animation: poiv1 3s ease-in;"></div>
+        </div>
+    </body>
+ </html>
